@@ -1,0 +1,26 @@
+group 'com.mgil.labs'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':EJB-Commons')
+    compile 'org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.1.1.Final'
+    compile 'org.jboss.spec.javax.ejb:jboss-ejb-api_3.1_spec:1.0.2.Final'
+    compile 'org.jboss:jboss-ejb-client:1.0.40.Final'
+    compile 'org.jboss.xnio:xnio-api:3.6.2.Final'
+    compile 'org.jboss.xnio:xnio-nio:3.6.2.Final'
+    compile 'org.wildfly:wildfly-ejb-client-bom:8.1.0.Final'
+//    compile 'jboss:jboss-client:4.0.2'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.jboss.remoting3:jboss-remoting:3.3.3.Final'
+    compile 'org.jboss.sasl:jboss-sasl:1.0.5.Final'
+    compile 'org.jboss.marshalling:jboss-marshalling-river:2.0.4.Final'
+
+}
